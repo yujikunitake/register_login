@@ -2,5 +2,12 @@ repos:
     - repo: https://github.com/commitizen-tools/commitizen
       rev: v3.27.0
       hooks:
-        - id: commitizen
-          stages: [commit-msg]
+          - id: commitizen
+            stages: [commit-msg]
+
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.1.9
+      hooks:
+          - id: ruff
+            args: [--fix]
+          - id: ruff-format
