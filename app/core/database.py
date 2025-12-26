@@ -14,7 +14,7 @@ SessionLocal = async_sessionmaker(
 BaseModel = declarative_base()
 
 
-async def get_Session() -> AsyncGenerator[AsyncSession, None]:
+async def get_session() -> AsyncGenerator[AsyncSession, None]:
     async with SessionLocal() as session:
         try:
             yield session
